@@ -1,0 +1,21 @@
+ #rock ,#paper,#scissor{
+     width: 200px;
+     height:150px;
+     margin:10px;
+ }
+
+.flex-box-rps{
+    margin:0 auto;
+    width:75%;
+    flex-wrap: wrap;
+    align-items: center;
+    
+    display:flex;
+    justify-content: space-around;
+}
+.container{
+    width:75%;
+    margin: 0 auto;
+    text-align: center;
+    border: 1px solid black;
+} 
