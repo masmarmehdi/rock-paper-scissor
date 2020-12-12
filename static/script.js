@@ -26,9 +26,9 @@ function decideWinner(yourChoice,computerChoice){
     var yourScore=rpsDataBase[yourChoice][computerChoice];
     var computerScore=rpsDataBase[computerChoice][yourChoice];
 
-    return [yourScore][computerScore];
+    return [yourScore,computerScore];
 }
-function finalMessage(yourScore,computerScore){
+function finalMessage([yourScore,computerScore]){
     if(yourScore===1){
         return {'message':'You won!','color':'green'};
     }else if(yourScore===0.5){
