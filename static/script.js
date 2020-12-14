@@ -47,13 +47,17 @@ function rpsFrontEnd(yourImageChoice,botImageChoice,finalMessage){
     document.getElementById('rock').remove();
     document.getElementById('paper').remove();
     document.getElementById('scissor').remove();
+
     var yourDiv=document.createElement('div');
     var botDiv=document.createElement('div');
     var messageDiv=document.createElement('div');
+    
     yourDiv.innerHTML="<img src='"+imageDataBase[yourImageChoice]+"' width=200 height=150;>";
     botDiv.innerHTML="<img src='"+imageDataBase[botImageChoice]+"' width=200 height=150;>";
-    messageDiv.innerHTML="<h2 style='color:"+finalMessage['color']+"'>"+finalMessage['message']+"</h2>";
+    messageDiv.innerHTML="<h1 style='color:"+finalMessage['color']+"'>"+finalMessage['message']+"</h1>";
+    
     document.getElementById('flex-box-rps-div').appendChild(yourDiv);
     document.getElementById('flex-box-rps-div').appendChild(messageDiv);
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
+    
 }
