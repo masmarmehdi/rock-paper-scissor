@@ -1,7 +1,21 @@
- #rock ,#paper,#scissor{
-     width: 200px;
+ *{
+     font-family:Arial, Helvetica, sans-serif;
+ }
+ #rock ,#scissor, #paper{
+     width: 150px;
      height:150px;
      margin:10px;
+    
+ }
+ h1{
+    background-color:#006bb3;
+    color:white;
+    margin:0;
+    padding:10px;
+ }
+ #rock:hover ,#scissor:hover, #paper:hover{
+    box-shadow: 0 5px 5px -2px gray;
+    border:1px solid black;
  }
 
 .flex-box-rps{
@@ -9,7 +23,7 @@
     width:75%;
     flex-wrap: wrap;
     align-items: center;
-    
+    padding:10px;
     display:flex;
     justify-content: space-around;
 }
@@ -18,10 +32,16 @@
     margin: 0 auto;
     text-align: center;
     border: 1px solid black;
+    background-color: #cce6ff;
 } 
-/*.playAgainButton{
-    padding:10px;
-    font-size: 20px;
+#play-again-button{
     margin : 10px auto;
-    background-color:#24A91E;
-}*/
+    background-color:#006bb3;
+    color:white;
+    font-size:15px;
+    padding:10px;
+    border:1px solid black;
+}
+#play-again-button:hover{
+    box-shadow: 0 5px 5px -2px black;
+}

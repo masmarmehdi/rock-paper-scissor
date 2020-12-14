@@ -6,19 +6,19 @@
     <title>Rock-Paper-Scissors Game</title>
     <link rel="stylesheet" href="static/style.css">
 </head>
-<body>
+<body class="example">
     <div class="container">
-        <h2>Rock Paper Scissor !</h2>
-        <p>Choose one item and see if you can win the computer!</p>
+        <h1>Rock Paper Scissor !</h1>
+        <h2>Choose one item and see if you can win the computer!</h2>
         <div class="flex-box-rps" id="flex-box-rps-div">
-            <img id="rock" src="https://www.pinclipart.com/picdir/middle/281-2816692_rock-clipart-small-rock-png-download.png" alt="rock" onclick="rpsGame(this)">
-            <img id="paper" src="https://www.pikpng.com/pngl/m/218-2188278_paper-looseleaf-notebook-blank-notepad-lined-loose-leaf.png" alt="paper" onclick="rpsGame(this)">
+            <img id="rock" src="https://assets.stickpng.com/images/580b585b2edbce24c47b26f6.png" alt="rock" onclick="rpsGame(this)">
+            <img id="paper" src="https://images.designtrends.com/wp-content/uploads/2016/08/06152656/Clean-White-Crumpled-Paper-Texture.jpg" alt="paper" onclick="rpsGame(this)">
             <img id="scissor" src="https://www.laurence.ps/wp-content/uploads/2017/09/cropped-open-scissors.png" alt="scissor" onclick="rpsGame(this)">
         </div>
-        <!-- <button  class="playAgainButton" id="playagain" onclick="playagain()">Play Again</button> -->
-        
+        <div>
+        <button onclick="playAgain()" id="play-again-button">Play again</button>
+        </div>
     </div>
-    
     <script src="static/script.js"></script>
 </body>
 </html> 

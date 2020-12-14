@@ -1,13 +1,9 @@
 function rpsGame(yourChoice){
     var humanChoice,botChoice;
     humanChoice=yourChoice.id;
-    console.log('Human choice:',humanChoice);
     botChoice=numberToChoice(botRandomChoice());
-    console.log('computer choice:',botChoice)
     result=decideWinner(humanChoice,botChoice);
-    console.log(result);
     message=finalMessage(result);
-    console.log(message);
     rpsFrontEnd(humanChoice,botChoice,message);
     
 }
@@ -30,11 +26,11 @@ function decideWinner(yourChoice,computerChoice){
 }
 function finalMessage([yourScore,computerScore]){
     if(yourScore===1){
-        return {'message':'You won!','color':'green'};
+        return {'message':'You won!','color':'white','background-color':'#2d862d'};
     }else if(yourScore===0.5){
-        return {'message':'You tied!','color':'yellow'};
+        return {'message':'You tied!','color':'white','background-color':'#e68a00'};
     }else{
-        return {'message':'You lost!','color':'red'};
+        return {'message':'You lost!','color':'white','background-color':'#b30000'};
     }
 }
 function rpsFrontEnd(yourImageChoice,botImageChoice,finalMessage){
@@ -47,17 +43,23 @@ function rpsFrontEnd(yourImageChoice,botImageChoice,finalMessage){
     document.getElementById('rock').remove();
     document.getElementById('paper').remove();
     document.getElementById('scissor').remove();
-
     var yourDiv=document.createElement('div');
     var botDiv=document.createElement('div');
     var messageDiv=document.createElement('div');
-    
-    yourDiv.innerHTML="<img src='"+imageDataBase[yourImageChoice]+"' width=200 height=150;>";
-    botDiv.innerHTML="<img src='"+imageDataBase[botImageChoice]+"' width=200 height=150;>";
-    messageDiv.innerHTML="<h1 style='color:"+finalMessage['color']+"'>"+finalMessage['message']+"</h1>";
-    
+    var resultShown=document.createElement('div');
+    var resultShown1=document.createElement('div');
+    resultShown.innerHTML="<h2 style=background-color:#002b80;color:white;padding:10px;>You:</h2>";
+    resultShown1.innerHTML="<h2 style=background-color:#002b80;color:white;padding:10px;>:Computer</h2>";
+    yourDiv.innerHTML="<img src='"+imageDataBase[yourImageChoice]+"' width=150 height=150;>";
+    botDiv.innerHTML="<img src='"+imageDataBase[botImageChoice]+"' width=150 height=150;>";
+    messageDiv.innerHTML="<h1 style=color:"+finalMessage['color']+";font-size:40px;background-color:"+finalMessage['background-color']+";>"+finalMessage['message']+"</h1>";
+    document.getElementById('flex-box-rps-div').appendChild(resultShown);
     document.getElementById('flex-box-rps-div').appendChild(yourDiv);
     document.getElementById('flex-box-rps-div').appendChild(messageDiv);
     document.getElementById('flex-box-rps-div').appendChild(botDiv);
-    
+    document.getElementById('flex-box-rps-div').appendChild(resultShown1);
+}
+
+function playAgain(){
+    location.reload(); 
 }
